@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",                                                                        
+    "jsx": "preserve", 
+    "module": "ESNext",                                                
+    "moduleResolution": "node",
+    "rootDir": "./src",                     
+    "baseUrl": ".",      
+    "esModuleInterop": true,                                  
+    "allowSyntheticDefaultImports": true,  
+    "lib": ["DOM", "ESNext"],                     
+    "paths": {
+      "/@/*": ["src/*"],
+      "@/*": ["src/*"],
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "script/**/*",
+  ],
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "module": "CommonJS",
+      "moduleResolution": "NodeNext",
+    }
+  }
+}

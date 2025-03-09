@@ -1,0 +1,57 @@
+.previewImage {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  :global {
+    .mask-layer {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+    .preview-image-container {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      margin: 0 auto;
+      .image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        user-select: none;
+        -webkit-user-drag: none;
+        left: 0px;
+        top: 0px;
+        opacity: 1;
+        transition:
+          width 0.4s ease-out,
+          height 0.4s ease-out,
+          left 0.4s ease-out,
+          top 0.4s ease-out,
+          opacity 0.4s ease-out;
+      }
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 1.5em;
+      height: 1.5em;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
