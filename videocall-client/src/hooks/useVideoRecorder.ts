@@ -37,11 +37,33 @@ function useVideoRecorder(el: HTMLElement, options?: Options) {
   // }
   const recorder = new MediaRecorder(stream);
 
+  // 创建一个 Date 对象
+var today = new Date();
+ 
+// 获取年、月、日、时、分、秒
+var year = today.getFullYear();
+var month = today.getMonth() + 1; // 月份是从 0 开始计数的，需要加1
+var day = today.getDate();
+var hours = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+var millseconds = today.getMilliseconds();
+
+var formattedTime = year + "-" + 
+                   (month < 10 ? "0" : "") + month + "-" + 
+                   (day < 10 ? "0" : "") + day + "_" + 
+                   (hours < 10 ? "0" : "") + hours + "_" + 
+                   (minutes < 10 ? "0" : "") + minutes + "_" + 
+                   (seconds < 10 ? "0" : "") + seconds + "_" + 
+                   millseconds;
+
+var file_name = 'Videl_call_record_'+ formattedTime;
+
   let chunks: Blob[] = []
   recorder.onstop = function() {
     cancelAnimationFrame(animationFrameId)
     const blob = new Blob(chunks, { type: 'video/mp4' });
-    saveFile(blobToFile(blob, '视频录制'))
+    saveFile(blobToFile(blob, file_name))
     chunks = []
   }
 

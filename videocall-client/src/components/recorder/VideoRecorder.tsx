@@ -81,8 +81,8 @@ const VideoRecorder = memo((props: Props) => {
     <div ref={root} className={style.videoRecorder} onMouseDown={(e) => mousedown(e.nativeEvent)}>
       <div className="video-recorder-tool">
         { !state 
-            ? <span className='xicon' style={{fontSize: '1em'}} title="录制" onClick={start}><Record32Regular className="start" /></span>
-            : <span className='xicon' style={{fontSize: '1em'}} title="停止录制" onClick={end}><RecordStop16Regular className="end" /></span>
+            ? <span className='xicon' style={{fontSize: '1em'}} title="Start Record" onClick={start}><Record32Regular className="start" /></span>
+            : <span className='xicon' style={{fontSize: '1em'}} title="Stop Record" onClick={end}><RecordStop16Regular className="end" /></span>
         }
         { state ? <span className="time">{ date }</span> : null }
       </div>

@@ -197,7 +197,7 @@ const Chat = memo(forwardRef((props: Props, ref: Ref<RefType>) => {
           className="chat-input"
           onInput={(e) => setInputValue((e.nativeEvent.target as HTMLInputElement).value)}
           onKeyUp={sendMessage}
-          placeholder="请输入消息内容"
+          placeholder="Input Message"
           maxLength={maxlength}
           disabled={loading}
           value={inputValue}

@@ -230,7 +230,7 @@ const DeviceSelect = memo(forwardRef((props: Props, ref: Ref<RefType>) => {
             icon={<span className="anticon" style={iconStyle}><Icon>{props.deviceInfo.dispalyEnabled ? <DeviceDesktopOff /> : <DeviceDesktop />}</Icon></span>}
             type="primary"
           >
-            {props.deviceInfo.dispalyEnabled ? '取消共享' : '共享屏幕'}
+            {props.deviceInfo.dispalyEnabled ? 'Cancel Sharing' : 'Share Screen'}
           </Button>
           &nbsp;
           &nbsp;
@@ -252,7 +252,7 @@ const DeviceSelect = memo(forwardRef((props: Props, ref: Ref<RefType>) => {
             type="primary"
             danger
           >
-            退出房间
+            Exit
           </Button>
         </span>
         
