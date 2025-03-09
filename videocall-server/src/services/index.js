@@ -1,6 +1,6 @@
 const express = require('express');
 
-const PORT = 3000;
+const PORT = 5000;
 const HOST = "192.168.3.5";
 
 function createApp(middlewares) {

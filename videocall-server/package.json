@@ -1,5 +1,5 @@
 {
-  "name": "chatroom-server",
+  "name": "videocall-server",
   "version": "1.0.0",
   "description": "chatroom-server",
   "main": "./src/app.js",
@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=product npx nodemon ./src/app.js"
   },
   "author": "Eddie Wei",
-  "license": "MIT License",
+  "license": "Apache-2.0 license",
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2",

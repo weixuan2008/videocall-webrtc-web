@@ -14,7 +14,7 @@ const devConfig = merge(config, {
   devServer: {
 	  open: true, // 编译完自动打开浏览器
     host: '192.168.3.5',
-    port: 8080,
+    port: 5173,
     https: {
       key: fs.readFileSync(path.resolve(__dirname, '../ssl/key.pem')),
       cert: fs.readFileSync(path.resolve(__dirname, '../ssl/cert.pem'))
@@ -23,13 +23,13 @@ const devConfig = merge(config, {
     hot: true,
     proxy: {
       '/api': {
-        target: 'https://192.168.3.5:3000',
+        target: 'https://192.168.3.5:5000',
         pathRewrite: { '^/api': '' },
         changeOrigin: true,
         secure: false,
       },
       '/socket.io': {
-        target: 'https://192.168.3.5:3000',
+        target: 'https://192.168.3.5:5000',
         ws: true,
         secure: false,
       },

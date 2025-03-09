@@ -1,5 +1,5 @@
 {
-  "name": "rtcchatroom",
+  "name": "videocall-client",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -7,8 +7,8 @@
     "build": "rimraf dist && cross-env NODE_ENV=production webpack -c scripts/webpack.prod.js"
   },
   "keywords": [],
-  "author": "houwx",
-  "license": "MIT",
+  "author": "Eddie Wei",
+  "license": "Apache-2.0 license",
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@reduxjs/toolkit": "^1.9.7",
